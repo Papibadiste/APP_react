@@ -1,8 +1,14 @@
 body{
     background-color: #FFFFFF;
-    font-family: 'Alfa Slab One', cursive ;
+    font-family: 'Cabin Sketch', cursive;
+}
+h2{
+    font-size: 50px !important;
 }
 
+h3{
+    font-size: 40px !important;
+}
 
 .header{
     background-color: yellow !important;
@@ -22,10 +28,30 @@ body{
 }
 
 .img_home{
-    height: 100vh;
+    height: 80vh;
 }
 
 .home{
     display: flex;
     justify-content: center;
+}
+.Presentation{
+    font-size: 24px;
+}
+
+.Presentation_center{
+    font-family: 'Cabin Sketch', cursive;
+    border: dashed black;
+    border-radius: 30px;
+}
+
+.img_presentation{
+    width: 100%;
+    border: dashed black;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.div_presentation{
+    font-family: 'Special Elite', cursive;
 }

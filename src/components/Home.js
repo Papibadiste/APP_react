@@ -1,5 +1,6 @@
 import React from "react"
 import logo from "../img/logo.png";
+import {Link} from "react-router-dom";
 
 class Home extends React.Component{
     constructor() {
@@ -12,8 +13,8 @@ class Home extends React.Component{
     render(){
         return (
             <>
-                <main class="home">
-                    <img src={logo} alt="logo" className="img_home"></img>
+                <main class="Liste rpg">
+                    <Link class={"nav-link"} to="/presentation"> <img src={logo} alt="logo" className="img_home"></img> </Link>
                 </main>
 
 
