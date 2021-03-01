@@ -55,3 +55,30 @@ h3{
 .div_presentation{
     font-family: 'Special Elite', cursive;
 }
+
+.listerpg{
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.listerpg-tittle{
+    text-align: center;
+}
+
+.card-list{
+    border: dashed black;
+    border-radius: 30px;
+}
+
+.note{
+    font-size: 34px !important;
+
+}
+
+.img_listrpg{
+    width: 100%;
+
+}
+.description_listrpg{
+    font-family: 'Special Elite', cursive;
+    font-size: 24px !important;
+}

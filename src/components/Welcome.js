@@ -1,6 +1,6 @@
 import React from "react"
 import kh from "../img/kh.jpg";
-import p5 from "../img/p5.jpg";
+import p5 from "../img/Persona-5-Royal.jpg";
 
 class Presentation extends React.Component{
     constructor() {
@@ -23,22 +23,24 @@ class Presentation extends React.Component{
                                     <h3>Origine</h3>
                                     <div className={"row"}>
 
-                                        <div className={"col-lg-6 col-12"}>
-                                            <img src={kh} alt="logo" className="img_presentation"></img>
-                                        </div>
-                                        <div className={"col-lg-6 col-12 div_presentation"}>
-                                            oui
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={"mb-3"}>
-                                    <h3>Objectif</h3>
-                                    <div className={"row"}>
                                         <div className={"col-lg-6 col-12 div_presentation"}>
                                             oui
                                         </div>
                                         <div className={"col-lg-6 col-12"}>
                                             <img src={p5} alt="logo" className="img_presentation"></img>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div className={"mb-3"}>
+                                    <h3>Objectif</h3>
+                                    <div className={"row"}>
+
+                                        <div className={"col-lg-6 col-12"}>
+                                            <img src={kh} alt="logo" className="img_presentation"></img>
+                                        </div>
+                                        <div className={"col-lg-6 col-12 div_presentation"}>
+                                            oui
                                         </div>
 
                                     </div>

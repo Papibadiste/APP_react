@@ -13,7 +13,7 @@ class Home extends React.Component{
     render(){
         return (
             <>
-                <main class="Liste rpg">
+                <main class="home">
                     <Link class={"nav-link"} to="/presentation"> <img src={logo} alt="logo" className="img_home"></img> </Link>
                 </main>
 
