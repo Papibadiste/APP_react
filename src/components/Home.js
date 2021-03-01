@@ -1,4 +1,5 @@
 import React from "react"
+import logo from "../img/logo.png";
 
 class Home extends React.Component{
     constructor() {
@@ -11,12 +12,10 @@ class Home extends React.Component{
     render(){
         return (
             <>
+                <main class="home">
+                    <img src={logo} alt="logo" className="img_home"></img>
+                </main>
 
-                <nav class="navbar navbar-light bg-light">
-                    <a class="navbar-brand" href="">
-                            <div> Bootstrap </div>
-                    </a>
-                </nav>
 
             </>
         )

@@ -1,10 +1,13 @@
 import './App.css';
-import Welcome from "./components/Welcome";
+
+import Header from "./components/Header";
 import Home from "./components/Home";
+
 
 function App() {
   return (
     <>
+      <Header/>
       <Home/>
     </>
   );

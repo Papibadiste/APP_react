@@ -1,0 +1,31 @@
+body{
+    background-color: #FFFFFF;
+    font-family: 'Alfa Slab One', cursive ;
+}
+
+
+.header{
+    background-color: yellow !important;
+    width: 100vh;
+
+}
+
+.link-header{
+    color: white !important;
+    font-size: 33px;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.title{
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 50px !important;
+}
+
+.img_home{
+    height: 100vh;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+}
