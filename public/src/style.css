@@ -82,3 +82,16 @@ h3{
     font-family: 'Special Elite', cursive;
     font-size: 15px !important;
 }
+
+.inscritiontext{
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 30px;
+}
+
+.btninsco{
+    font-size: 24px !important;
+}
+.invalide-feedback{
+    color: red;
+    font-size: 20px;
+}

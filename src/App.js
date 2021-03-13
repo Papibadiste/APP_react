@@ -14,6 +14,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import React from "react";
 import ListeRpg from "./components/ListeRpg";
+import Connection from "./components/Connection";
+import Inscription from "./components/Inscription";
 
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
 
               <Route path="/presentation" component={Presentation} />
               <Route path="/listerpg" component={ListeRpg} />
+              <Route path="/connexion" component={Connection} />
+              <Route path="/inscription" component={Inscription} />
               <Route path="/" component={Home} />
           </Switch>
       </Router>
