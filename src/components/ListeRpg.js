@@ -5,11 +5,23 @@ class ListeRpg extends React.Component{
     constructor() {
         super()
         this.state = {
-
+            connexion : 0 ,
+            token : null
         }
     }
 
+    refresh = () => {
+    this.setState({token : null})
+    }
+
     render(){
+        if(localStorage.getItem('token')){
+
+            if (this.state.connexion === 0 ){
+                this.setState({connexion : 1})
+                this.refresh()
+            }
+        }
         return (
             <>
 

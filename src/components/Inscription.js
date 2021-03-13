@@ -22,6 +22,12 @@ class Inscription extends React.Component{
         }
     }
 
+    componentDidMount() {
+        if(localStorage.getItem('token')){
+            this.setState({redirect: true})
+        }
+    }
+
 
     handleNameChange = event => {
         this.setState({
@@ -58,6 +64,7 @@ class Inscription extends React.Component{
             .then(res => {
                 console.log(res.data)
                 localStorage.setItem('token', res.data.api_token)
+                document.location.reload()
                 this.setState({redirect : true })
             })
             .catch(error =>{

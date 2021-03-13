@@ -5,6 +5,7 @@ import baseUrl from "../baseurl/BaseUrl";
 import {Redirect} from "react-router-dom";
 
 
+
 class Connection extends React.Component{
 
     url = new baseUrl
@@ -16,6 +17,13 @@ class Connection extends React.Component{
             email : '',
             redirect: false,
             errors: []
+
+        }
+    }
+
+    componentDidMount() {
+        if(localStorage.getItem('token')){
+            this.setState({redirect: true})
         }
     }
 
@@ -41,7 +49,9 @@ class Connection extends React.Component{
             .then(res => {
                 console.log(res.data)
                 localStorage.setItem('token', res.data.api_token)
+                document.location.reload()
                 this.setState({redirect : true })
+
             })
             .catch(error =>{
                 if(error.response.status === 401){
