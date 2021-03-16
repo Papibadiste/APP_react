@@ -83,8 +83,9 @@ class Inscription extends React.Component{
             <>
                 <div className={"container-fluid"}>
                     <div className={"row "} >
-                        <div className={"col-6 offset-3 card-list mt-2"} >
-                            <form className={ "p-4 inscritiontext" }>
+                        <div className={"col-6 offset-3 card-list mt-2 inscritiontext"} >
+                            <h2 className={"listerpg-tittle"}>Inscription</h2>
+                            <form className={ "p-4 " }>
                                 <div className="form-group">
                                     <label htmlFor="name">Pseudo:</label>
                                     <input onChange={this.handleNameChange} type="text" className="form-control" id="name" placeholder="Entrer un pseudo" />

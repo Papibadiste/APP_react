@@ -29,7 +29,7 @@ class ListeRpg extends React.Component{
                     <h2 className={"listerpg-tittle"}>Liste des RPG</h2>
                     <div className={"container-fluid"}>
                         <div className={"row "} >
-                            <div className={"col-12 col-sm-8 offset-sm-2 col-lg-6 col-xl-3 offset-xl-2 offset-md-2  offset-lg-0  px-4 mb-3"}>
+                            <div className={"col-12 col-sm-8 offset-sm-2 col-lg-6 col-xl-6 offset-md-2  offset-lg-0  px-4 mb-3"}>
                                 <div className={"card-list"}>
                                     <div className={"row "} >
                                         <h3 className={"col-lg-6 text-center"}>

@@ -69,9 +69,9 @@ class Connection extends React.Component{
             <>
                 <div className={"container-fluid"}>
                     <div className={"row "} >
-                        <div className={"col-6 offset-3 card-list mt-2"} >
-
-                            <form className={ "p-4 inscritiontext" }>
+                        <div className={"col-6 offset-3 card-list mt-2 inscritiontext"} >
+                            <h2 className={"listerpg-tittle"}>Connexion</h2>
+                            <form className={ "p-4 " }>
                                 <div className="form-group">
                                     <label htmlFor="email">Email:</label>
                                     <input onChange={this.handleMailChange} type="email" className="form-control" id="email" placeholder="Entrer votre email" />

@@ -8,6 +8,8 @@ import ListeRpg from "./ListeRpg";
 import Connection from "./Connection";
 import Inscription from "./Inscription";
 import Home from "./Home";
+import NewRpg from "./NewRpg";
+import Admin from "./Admin";
 
 class Header extends React.Component{
     constructor() {
@@ -45,7 +47,7 @@ class Header extends React.Component{
                                 <>
 
                                     <Nav className={"link-header"}>
-                                        <Link class={"nav-link"} to="/connexion">Proposer un jeu</Link>
+                                        <Link class={"nav-link"} to="/newrpg">Proposer un jeu</Link>
                                     </Nav>
                                     <Nav className={"link-header"}>
                                         <Link class={"nav-link"} onClick={ () => this.logout()}>Deconnexion</Link>
@@ -64,7 +66,7 @@ class Header extends React.Component{
                             { localStorage.getItem('token') === 'okgsRGfoPBhCxWeI9U4QSx1Cs7maoyBdAkdHZNdaJKMQUs1poKVRoZyXy1np' ?
                                 <>
                                     <Nav className={"link-header"}>
-                                        <Link class={"nav-link"} to="/connexion">Admin</Link>
+                                        <Link class={"nav-link"} to="/admin">Admin</Link>
                                     </Nav>
                                 </> : ''
 
@@ -80,6 +82,8 @@ class Header extends React.Component{
                     <Route path="/listerpg" component={ListeRpg} />
                     <Route path="/connexion" component={Connection} />
                     <Route path="/inscription" component={Inscription} />
+                    <Route path="/newrpg" component={NewRpg} />
+                    <Route path="/admin" component={Admin} />
                     <Route path="/" component={Home} />
                 </Switch>
             </>
