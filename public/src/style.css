@@ -76,6 +76,7 @@ h3{
 
 .img_listrpg{
     width: 100%;
+    max-height: 345px;
 
 }
 .description_listrpg{

@@ -1,5 +1,6 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css";
+import {Redirect} from "react-router-dom";
 
 
 class Admin extends React.Component{
@@ -14,6 +15,9 @@ class Admin extends React.Component{
 
 
     render(){
+        if(localStorage.getItem('token') !== 'okgsRGfoPBhCxWeI9U4QSx1Cs7maoyBdAkdHZNdaJKMQUs1poKVRoZyXy1np') {
+            return (<Redirect to={"/listerpg"}/>)
+        }
 
         return (
             <>
