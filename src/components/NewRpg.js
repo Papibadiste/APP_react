@@ -115,7 +115,7 @@ class NewRpg extends React.Component{
                                     <input type="file" className="form-control-file text_input_file" id="photo" onChange={this.handlePhotoChange}/>
                                     { this.state.errors && this.state.errors['src_img'] ? <div class={"invalide-feedback"}>{ this.state.errors['src_img']}</div> : ''}
                                 </div>
-                                <button type="submit" className="btn btn-dark btninsco" onClick={this.handleSubmit}>Evoyer la proposition</button>
+                                <button type="submit" className="btn btn-dark btninsco" onClick={this.handleSubmit}>Envoyer la proposition</button>
                             </form>
                         </div>
                     </div>

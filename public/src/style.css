@@ -99,3 +99,9 @@ h3{
 .text_input_file{
     font-size: 23px;
 }
+
+@media screen and (min-width: 992px) and (max-width: 1450px) {
+    .card-list{
+        height: 712px !important;
+    }
+}
