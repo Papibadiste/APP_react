@@ -17,7 +17,7 @@ class Admin extends React.Component{
     }
 
     componentWillMount() {
-        axios.get(this.url.value + '/api/listrpg')
+        axios.get(this.url.value + '/api/admin')
             .then(res => {
                 this.setState({pictures: res.data})
 
@@ -36,7 +36,7 @@ class Admin extends React.Component{
         axios.get(this.url.value+'/api/admin/change/'+id)
             .then(res => {
                 console.log('bien joué')
-                axios.get(this.url.value + '/api/listrpg')
+                axios.get(this.url.value + '/api/admin')
                     .then(res => {
                         this.setState({pictures: res.data})
 
@@ -45,11 +45,6 @@ class Admin extends React.Component{
                         console.log(error)
                     })
 
-            })
-            .catch(error =>{
-                if(error.response.status === 401){
-                    this.setState({errors : error.response.data.errors} , () => console.log(this.state) )
-                }
             })
 
     }
