@@ -24,7 +24,7 @@ class Presentation extends React.Component{
                                     <div className={"row"}>
 
                                         <div className={"col-lg-6 col-12 div_presentation"}>
-                                            oui
+                                            RPG (sigle issu de l'anglais role playing game), est un genre de jeu vidéo s'inspirant du principe des jeux de rôle sur table. Le joueur y incarne un ou plusieurs personnages qu'il fait évoluer au fil d'une quête.
                                         </div>
                                         <div className={"col-lg-6 col-12"}>
                                             <img src={p5} alt="logo" className="img_presentation"></img>
@@ -40,7 +40,7 @@ class Presentation extends React.Component{
                                             <img src={kh} alt="logo" className="img_presentation"></img>
                                         </div>
                                         <div className={"col-lg-6 col-12 div_presentation"}>
-                                            oui
+                                            Ce site vous présente plusieurs RPG avec une présentation et une note. Vous avez la possibilité d'envoyer une recommandation qui sera analysée et peut être affichée sur le site.
                                         </div>
 
                                     </div>
