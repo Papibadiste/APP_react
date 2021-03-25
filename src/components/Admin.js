@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {Redirect} from "react-router-dom";
 import baseUrl from "../baseurl/BaseUrl";
 import axios from "axios";
+import Header from "./Header";
 
 
 class Admin extends React.Component{
@@ -59,6 +60,7 @@ class Admin extends React.Component{
 
         return (
             <>
+                <Header/>
                 <table className="table table-success table-striped">
                     <thead>
                     <tr>

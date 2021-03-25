@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import baseUrl from "../baseurl/BaseUrl";
 import {Redirect} from "react-router-dom";
+import Header from "./Header";
 
 
 class NewRpg extends React.Component{
@@ -88,38 +89,54 @@ class NewRpg extends React.Component{
         }
         return (
             <>
-                <div className={"container-fluid"}>
-                    <div className={"row "} >
-                        <div className={"col-6 offset-3 card-list mt-2 inscritiontext"} >
-                            <h2 className={"listerpg-tittle"}>Proposer un jeu</h2>
-                            <form className={ "p-4 " } method={'POST'} encType={"multipart/form-data"}>
-                                <div className="form-row">
-                                    <div className="col">
-                                        <label htmlFor="name">Nom du jeu:</label>
-                                        <input type="text" className="form-control form-control-lg" placeholder="Nom du jeu" id={"name"} onChange={this.handleNameChange}/>
-                                        { this.state.errors && this.state.errors['title'] ? <div class={"invalide-feedback"}>{ this.state.errors['title']}</div> : ''}
+                <Header/>
+                <main>
+                    <div className={"container-fluid"}>
+                        <div className={"row "}>
+                            <div className={"col-6 offset-3 card-list mt-2 inscritiontext"}>
+                                <h2 className={"listerpg-tittle"}>Proposer un jeu</h2>
+                                <form className={"p-4 "} method={'POST'} encType={"multipart/form-data"}>
+                                    <div className="form-row">
+                                        <div className="col">
+                                            <label htmlFor="name">Nom du jeu:</label>
+                                            <input type="text" className="form-control form-control-lg"
+                                                   placeholder="Nom du jeu" id={"name"}
+                                                   onChange={this.handleNameChange}/>
+                                            {this.state.errors && this.state.errors['title'] ? <div
+                                                className={"invalide-feedback"}>{this.state.errors['title']}</div> : ''}
+                                        </div>
+                                        <div className="col">
+                                            <label htmlFor="note">Note:</label>
+                                            <input type="text" className="form-control form-control-lg"
+                                                   placeholder="note sur 100" id={"note"}
+                                                   onChange={this.handleNoteChange}/>
+                                            {this.state.errors && this.state.errors['note'] ? <div
+                                                className={"invalide-feedback"}>{this.state.errors['note']}</div> : ''}
+                                        </div>
                                     </div>
-                                    <div className="col">
-                                        <label htmlFor="note">Note:</label>
-                                        <input type="text" className="form-control form-control-lg" placeholder="note sur 100" id={"note"} onChange={this.handleNoteChange}/>
-                                        { this.state.errors && this.state.errors['note'] ? <div class={"invalide-feedback"}>{ this.state.errors['note']}</div> : ''}
+                                    <div className="form-group">
+                                        <label htmlFor="description">Description</label>
+                                        <textarea className="form-control" id="description" rows="10"
+                                                  onChange={this.handleDescriptionChange}/>
+                                        {this.state.errors && this.state.errors['description'] ? <div
+                                            className={"invalide-feedback"}>{this.state.errors['description']}</div> : ''}
                                     </div>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="description">Description</label>
-                                    <textarea className="form-control" id="description" rows="10" onChange={this.handleDescriptionChange}/>
-                                    { this.state.errors && this.state.errors['description'] ? <div class={"invalide-feedback"}>{ this.state.errors['description']}</div> : ''}
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="photo">Image du jeu</label>
-                                    <input type="file" className="form-control-file text_input_file" id="photo" onChange={this.handlePhotoChange}/>
-                                    { this.state.errors && this.state.errors['src_img'] ? <div class={"invalide-feedback"}>{ this.state.errors['src_img']}</div> : ''}
-                                </div>
-                                <button type="submit" className="btn btn-dark btninsco" onClick={this.handleSubmit}>Envoyer la proposition</button>
-                            </form>
+                                    <div className="form-group">
+                                        <label htmlFor="photo">Image du jeu</label>
+                                        <input type="file" className="form-control-file text_input_file" id="photo"
+                                               onChange={this.handlePhotoChange}/>
+                                        {this.state.errors && this.state.errors['src_img'] ? <div
+                                            className={"invalide-feedback"}>{this.state.errors['src_img']}</div> : ''}
+                                    </div>
+                                    <button type="submit" className="btn btn-dark btninsco"
+                                            onClick={this.handleSubmit}>Envoyer la proposition
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </main>
+
             </>
         )
     }

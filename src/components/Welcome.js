@@ -1,6 +1,7 @@
 import React from "react"
 import kh from "../img/kh.jpg";
 import p5 from "../img/Persona-5-Royal.jpg";
+import Header from "./Header";
 
 class Presentation extends React.Component{
     constructor() {
@@ -13,6 +14,7 @@ class Presentation extends React.Component{
     render(){
         return (
             <>
+                <Header/>
                 <main>
 
                     <div className={"Presentation container-fluid"}>

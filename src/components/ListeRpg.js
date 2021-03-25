@@ -1,6 +1,7 @@
 import React from "react"
 import axios from "axios";
 import baseUrl from "../baseurl/BaseUrl";
+import Header from "./Header";
 
 class ListeRpg extends React.Component {
 
@@ -27,7 +28,7 @@ class ListeRpg extends React.Component {
     render() {
         return (
             <>
-
+                <Header/>
             <main class="listerpg">
                 <h2 className={"listerpg-tittle"}>Liste des RPG</h2>
                 <div className={"container-fluid"}>

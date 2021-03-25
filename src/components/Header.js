@@ -76,16 +76,7 @@ class Header extends React.Component{
                     </Navbar.Collapse>
                 </Navbar>
 
-                <Switch>
 
-                    <Route path="/presentation" component={Presentation} />
-                    <Route path="/listerpg" component={ListeRpg} />
-                    <Route path="/connexion" component={Connection} />
-                    <Route path="/inscription" component={Inscription} />
-                    <Route path="/newrpg" component={NewRpg} />
-                    <Route path="/admin" component={Admin} />
-                    <Route path="/" component={Home} />
-                </Switch>
             </>
         )
     }

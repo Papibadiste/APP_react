@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import baseUrl from "../baseurl/BaseUrl";
 import {Redirect} from "react-router-dom";
+import Header from "./Header";
 
 
 
@@ -49,7 +50,6 @@ class Connection extends React.Component{
             .then(res => {
                 console.log(res.data)
                 localStorage.setItem('token', res.data.api_token)
-                document.location.reload()
                 this.setState({redirect : true })
 
             })
@@ -67,29 +67,41 @@ class Connection extends React.Component{
         }
         return (
             <>
-                <div className={"container-fluid"}>
-                    <div className={"row "} >
-                        <div className={"col-6 offset-3 card-list mt-2 inscritiontext"} >
-                            <h2 className={"listerpg-tittle"}>Connexion</h2>
-                            <form className={ "p-4 " }>
-                                <div className="form-group">
-                                    <label htmlFor="email">Email:</label>
-                                    <input onChange={this.handleMailChange} type="email" className="form-control" id="email" placeholder="Entrer votre email" />
-                                    { this.state.errors && this.state.errors.email ? <div class={"invalide-feedback"}>{ this.state.errors['email']}</div> : ''}
+                <Header/>
+                <main>
+                    <div className={"container-fluid"}>
+                        <div className={"row "}>
+                            <div className={"col-6 offset-3 card-list mt-2 inscritiontext"}>
+                                <h2 className={"listerpg-tittle"}>Connexion</h2>
+                                <form className={"p-4 "}>
+                                    <div className="form-group">
+                                        <label htmlFor="email">Email:</label>
+                                        <input onChange={this.handleMailChange} type="email" className="form-control"
+                                               id="email" placeholder="Entrer votre email"/>
+                                        {this.state.errors && this.state.errors.email ? <div
+                                            className={"invalide-feedback"}>{this.state.errors['email']}</div> : ''}
 
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="password1">Mot de passe:</label>
-                                    <input onChange={this.handlePasswordChange} type="password" className="form-control" id="password1"
-                                           placeholder="Mot de passe"/>
-                                    { this.state.errors && this.state.errors.password ? <div class={"invalide-feedback"}>{ this.state.errors['password']}</div> : ''}
-                                </div>
-                                { this.state.errors && this.state.errors === "bad_credentials" ? <div class={"alert alert-danger invalide-feedback"}>Les identifiants sont invalides</div> : ''}
-                                <button type="submit" className="btn btn-dark w-100 btninsco" onClick={this.handleSubmit}>Connexion</button>
-                            </form>
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="password1">Mot de passe:</label>
+                                        <input onChange={this.handlePasswordChange} type="password"
+                                               className="form-control" id="password1"
+                                               placeholder="Mot de passe"/>
+                                        {this.state.errors && this.state.errors.password ? <div
+                                            className={"invalide-feedback"}>{this.state.errors['password']}</div> : ''}
+                                    </div>
+                                    {this.state.errors && this.state.errors === "bad_credentials" ?
+                                        <div className={"alert alert-danger invalide-feedback"}>Les identifiants sont
+                                            invalides</div> : ''}
+                                    <button type="submit" className="btn btn-dark w-100 btninsco"
+                                            onClick={this.handleSubmit}>Connexion
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </main>
+
 
             </>
         )
